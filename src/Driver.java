@@ -100,6 +100,11 @@ public class Driver {
 		panel.add(btnmenos, gbc_btnmenos);
 		
 		JButton btnclear = new JButton("C");
+		btnclear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText("");
+			}
+		});
 		GridBagConstraints gbc_btnclear = new GridBagConstraints();
 		gbc_btnclear.fill = GridBagConstraints.BOTH;
 		gbc_btnclear.gridheight = 2;
