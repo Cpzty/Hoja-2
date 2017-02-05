@@ -69,7 +69,7 @@ public class Op implements Calculadora {
 			}
 		}
 	
-		double respuesta = (double) datos.pop();
+		double respuesta = (int) datos.pop();
 		return respuesta;
 	
 		

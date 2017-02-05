@@ -16,8 +16,8 @@ public class Main {
 		BufferedReader file = new BufferedReader(new FileReader("Prueba.txt"));
 		Op calculadora = new Op();
 		String operacion = file.readLine();
-		calculadora.operar(operacion);
 		System.out.println(operacion);
+		System.out.println(calculadora.operar(operacion));
 		
 		//me detone todo eso wei porque ahora pones afuera del git el archivo y funciona
 		
