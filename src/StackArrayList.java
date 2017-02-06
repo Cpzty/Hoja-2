@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 
 public class StackArrayList<E>
- implements Pila<E>
+ implements iPila<E>
 {
 	protected ArrayList<E> data;
 

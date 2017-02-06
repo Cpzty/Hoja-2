@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Op implements Calculadora {
+public class Op implements iCalculadora {
 
 
 	
@@ -10,27 +10,27 @@ public class Op implements Calculadora {
 	}
 
 	@Override
-	public int suma(int a, int b) {
+	public double suma(double a, double b) {
 		// TODO Auto-generated method stub
 		return a+b;
 	}
 
 	@Override
-	public int resta(int a, int b) {
+	public double resta(double a, double b) {
 		// TODO Auto-generated method stub
 		return a-b;
 	}
 
 	@Override
-	public int multiplicacion(int a, int b) {
+	public double multiplicacion(double a, double b) {
 		// TODO Auto-generated method stub
 		return a*b;
 	}
 
 	@Override
-	public int division(int a, int b) {
+	public double division(double a, double b) {
 		// TODO Auto-generated method stub
-		return a/b;
+		return b/a;
 	}
 
 	public double operar(String n){
@@ -53,9 +53,9 @@ public class Op implements Calculadora {
 				datos.push(lector.nextInt());
 			}
 			else{
-				int numero1, numero2;
-				numero1 = (int) datos.pop();
-				numero2 = (int) datos.pop();
+				double numero1, numero2;
+				numero1 = Double.parseDouble(datos.pop().toString());
+				numero2 = Double.parseDouble(datos.pop().toString()) ;
 				String operando = lector.next();
 				
 				switch (operando){
@@ -64,12 +64,18 @@ public class Op implements Calculadora {
 					break;
 				case "-": 
 					datos.push(resta(numero1, numero2));
+					break;
+				case "*":
+					datos.push(multiplicacion(numero1, numero2));
+					break;
+				case "/":
+					datos.push(division(numero1, numero2));
+					break;
 				}
-				
 			}
 		}
 	
-		double respuesta = (int) datos.pop();
+		double respuesta = (double) datos.pop();
 		return respuesta;
 	
 		
