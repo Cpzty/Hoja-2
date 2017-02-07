@@ -33,6 +33,10 @@ public class Op implements iCalculadora {
 		return b/a;
 	}
 
+	
+	/**
+ * Operar procesa todo el string dado
+ */
 	public double operar(String n){
 		
 		/**
@@ -47,6 +51,11 @@ public class Op implements iCalculadora {
 		
 		StackArrayList datos = new StackArrayList();
 		Scanner lector = new Scanner(n);
+		
+/**
+ * Con el lector y el stackarraylist va revisando la linea si tiene espacio numero o operacion 
+ * y tiene un switch para cada operando para que efectue la operacion y haga el push regresa el resultado de toda la operación
+ */
 		
 		while(lector.hasNext()){
 			if(lector.hasNextInt()){
