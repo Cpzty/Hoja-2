@@ -1,3 +1,7 @@
+/**
+ * @author Cristian Pérez Carnet 16011
+ * @author Jose Rodolfo Pérez Carnet 16056
+ */
 import java.util.ArrayList;
 
 
