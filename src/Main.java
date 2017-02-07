@@ -1,3 +1,7 @@
+/**
+ * @author Cristian Pérez Carnet 16011
+ * @author Jose Rodolfo Pérez Carnet 16056
+ */
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -14,12 +18,16 @@ public class Main {
 	    System.out.println("Bienvenido al programa de calculadora!");
 		
 		BufferedReader file = new BufferedReader(new FileReader("Prueba.txt"));
+		
+/**
+ * crea la calculadora y llama al metodo de operación en ella
+ */
 		Op calculadora = new Op();
 		String operacion = file.readLine();
 		System.out.println(operacion);
 		System.out.println(calculadora.operar(operacion));
 		
-		//me detone todo eso wei porque ahora pones afuera del git el archivo y funciona
+		
 		
 			
 				
